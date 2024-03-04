@@ -1,13 +1,125 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*.header{
+    display:flex;
+    /*border:1px solid black;
+    justify-content: space-between;
+    height:75px
+    
 }
+.logo{
+    width:75px
+}
+.navigation > ul{
+    list-style-type: none;
+    display:flex
+}
+.navigation > ul>li{
+    padding: 0px 60px 0px 60px;
+    font-size:23px;
+    font-weight: normal;
+}
+.cart-icon{
+    width:50px;
+    padding : 14px 10px 10px 10px;
+}
+.body{
+    border:1px solid black;
+    height: 400px;
+    margin-top : 25px;
+}
+.search{
+    text-align: right;
+    padding:10px
+   
+}
+.Restraunt-Container{
+    height:350px;
+    margin-top : 25px;
+}
+.res-card{
+    border:1px solid black;
+    height:250px;
+    width:200px;
+}
+.res-icon{
+    width:100px;
+    height:100px;
+    
+    padding : 10px 10px 0px 50px;
+}
+.res-card{
+    background-color: azure;
+    padding:5px;
+    margin:5px;
+    
+    width:200px;
+}
+.res-card:hover{
+    cursor: pointer;
+    border:1px solid black;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
+.res-card h4,h5{
+    margin:1px;
+    font-weight: normal;
+    font-size:18px;
+    margin:6px;
+}
+#res-name{
+    margin:6px 0px;
+    font-weight: bold;
+    font-size:20px;
+
+}
+.search{
+    text-align: right;
+    padding:10px;
+    margin-top : 25px;
+    font-weight: normal;
+    font-size:20px;
+   
+}
+.filter-btn{
+    margin:10px;
+    cursor: pointer;
+}
+.res-icon{
+    width:100%;
+    height:50%;
+  
+}
+.Restraunt-Container{
+   
+    margin-top : 25px;
+    display: flex;
+    flex-wrap: wrap;
+    
+   
+}
+.shimmer-container{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+  
+   justify-content: space-evenly;
+   
+}
+.shimmer-card{
+    background-color: azure;
+    padding:5px;
+    margin: 5px;
+    height: 400px;
+    
+    
+    width:200px;
+}
+.btn{
+    margin: 35px 0px;
+}
+.logbutton{
+    pad
+}
+*/
