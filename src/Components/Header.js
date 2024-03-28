@@ -22,24 +22,24 @@ const onlineStatus=useOnlineStatus();
             
             < div className='flex justify-between items-center'>
                     <div className='logo-container'>
-                            <img className="logo w-28 rounded-[100px] m-2 ml-6" src={APP_LOGO} alt="company logo"/>
+                            <img className="logo w-24 ml-4 md:w-28 rounded-[100px] m-2 md:ml-6" src={APP_LOGO} alt="company logo"/>
 
                     </div>
                     <div >
                             <ul className="flex items-center p-4 m-4">
-                                    <li  className="px-4">Online Status: {onlineStatus===true?"❣":"💔"}</li>
+                                    <li  className="px-4 md:block hidden">Online Status: {onlineStatus===true?"❣":"💔"}</li>
                                     <li className="px-4"><Link to="/">Home</Link></li>
                                     <li className="px-4"><Link to="/about">About Us</Link></li>
                                     <li className="px-4"><Link to="/contact">Conatct Us</Link></li>
-                                    <li className="px-4"><Link to="/grocery">Grocery</Link></li>
-                                    <li className="px-4"> <button className="btn" onClick={()=>{
+                                    <li className="px-4 md:block hidden"><Link to="/grocery">Grocery</Link></li>
+                                   {/*} <li className="px-4"> <button className="btn" onClick={()=>{
                                      logbtn==="Login"?setlogbtn("Logout"):setlogbtn("Login");
                                       console.log(logbtn);
                     }
                                            }>{logbtn}
                     
-                                            </button></li>
-                                 <li className="px-4 font-bold">{loggedInUser}</li>
+                                        </button></li>*/}
+                                 <li className="px-4 font-bold  md:block hidden">{loggedInUser}</li>
 
                            
 
@@ -49,7 +49,7 @@ const onlineStatus=useOnlineStatus();
                                  
                          <li  className="px-4  ">  
                          <Link to="/Cart">
-                         <img className="w-[50px]" src={CART_LOGO} alt="cart logo"/></Link></li>
+                         <img className="md:w-[50px]" src={CART_LOGO} alt="cart logo"/></Link></li>
                          <li className="font-bold">{cartItems.length}</li>
                          
                             </ul>
