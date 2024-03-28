@@ -1,4 +1,4 @@
-//import resList from "../utils/mockdata";
+import resList from "../utils/mockdataRestraunts";
 import Shimmer from "./Shimmer";
 import RestrauntCard, { RestrauntCardFast } from "./RestrauntCard";
 import { useEffect, useState, useContext } from "react";
@@ -73,26 +73,27 @@ const Body = () => {
   const { loggedInUser, setuserName } = useContext(LoggedinUserContext);
   //console.log(loggedInUser)
 
-  const fetchdata = async () => {
-            const swiggyMenuAPI="https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
-        const corsURL='https://corsproxy.org/?'+encodeURIComponent(swiggyMenuAPI);
-       // console.log(corsURL)
-            //const data= await fetch(corsURL);
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-       );
-    const json = await data.json();
+  const fetchdata = () => {
+    //         const swiggyMenuAPI="https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+    //     const corsURL='https://corsproxy.org/?'+encodeURIComponent(swiggyMenuAPI);
+    //    console.log(corsURL)
+    //   const data= await fetch(corsURL);
+    // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    //    );
+    // const json = await data.json();
     // console.log("data",data);
-    //console.log("json",json);
+    // console.log("json",json);
     //console.log("..",json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     //const newRestaurant =json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
     //setrestrauntList((prevList)=>[...prevList,...newRestaurant])
     //setfilteredrestrauntList((prevList)=>[...prevList,...newRestaurant]);
     //setLoading(false)
     setrestrauntList(
-      json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      resList
+      //json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    setfilteredrestrauntList(
-      json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    setfilteredrestrauntList(resList
+     // json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
   const RestaurantCardFastcomponent = RestrauntCardFast(RestrauntCard);
