@@ -110,10 +110,10 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="filter flex ">
-        <div className="p-4 m-4">
+        <div className="p-4 ml-7 md:ml-8">
           <input
             data-testid="searchinput"
-            className="border  border-solid border-black"
+            className="border  border-solid border-black w-[90px] md:w-[175px]"
             type="text"
             value={searchdata}
             onChange={(e) => {
@@ -121,7 +121,7 @@ const Body = () => {
             }}
           ></input>
           <button
-            className="searchbutton px-4 py-2 bg-green-100 m-4 rounded-lg"
+            className="searchbutton px:2 md:px-4 py-2 bg-green-100 m-4 rounded-lg w-[60px] md:w-[100px]"
             onClick={() => {
               const filteredList = restrauntList.filter((res) =>
                 res.info.name.toLowerCase().includes(searchdata.toLowerCase())
@@ -136,7 +136,7 @@ const Body = () => {
           </button>
 
           <button
-            className="filter-btn px-4 py-2 bg-gray-100 m-4 rounded-lg"
+            className="filter-btn px:0 md:px-4 py-2 bg-gray-100 m-0.5 md:m-4 rounded-lg w-[140px] md:w-[200px]"
             onClick={() => {
               const filteredList = restrauntList.filter(
                 (elements) => elements.info.avgRating > 4.4
@@ -149,9 +149,9 @@ const Body = () => {
           >
             Top rated restraunt
           </button>
-          <label>User Name: </label>
-          <input
-            className="border  pl-2 border-solid border-black"
+          <label className="hidden md:inline"> User Name: </label>
+          <input 
+            className="border  pl-2 border-solid border-black hidden md:inline"
             value={loggedInUser}
             type="text"
             onChange={(e) => {
@@ -160,7 +160,7 @@ const Body = () => {
           ></input>
         </div>
       </div>
-      <div className="flex flex-wrap ml-8">
+      <div className="flex flex-wrap ml-4 md:ml-8">
         
         {filteredrestrauntList.map((Restaurant) => (
           <Link
